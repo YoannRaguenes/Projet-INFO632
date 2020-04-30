@@ -8,7 +8,7 @@
 <div id="modif">
 	<?php
 	session_start();
-	include("connexion_base.php");
+	include("connect_bdd.php");
 	$sql =  "SELECT *
 			 FROM demande_materiel";
 			$sth = $base->prepare($sql);

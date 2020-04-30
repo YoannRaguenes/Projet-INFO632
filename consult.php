@@ -1,5 +1,5 @@
 <?php
-	include("connexion_base.php");
+	include("connect_bdd.php");
 	$demande = $_POST['demande'];	
 	$sql = "SELECT * FROM demande_materiel WHERE description = '".$demande."'";
 	$sth = $base->prepare($sql);

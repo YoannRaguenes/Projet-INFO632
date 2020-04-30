@@ -22,7 +22,7 @@
 <body>
 	<div id="barre_init">
 	<?php 
-	include("connexion_base.php");
+	include("connect_bdd.php");
 
 	$sql = "SELECT * FROM `demande_travaux` WHERE id_demande_travaux = 1";
 	$sth = $base->prepare($sql);
