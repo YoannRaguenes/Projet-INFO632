@@ -75,9 +75,14 @@
  							}
 
 
+						header('Location: http://localhost/projet-INFO642/tempo.php');
+						exit();
+	
 
 
-	 						header ("Location: http://localhost/projINFO642/tempo.php");
+ 						
+
+	 							
 
 
 	 					}

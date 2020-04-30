@@ -1,23 +1,23 @@
 <?php
 	include('connect_bdd.php');
 
-	echo $_SESSION['email'] . " " . $_SESSION['nom'] . " " . $_SESSION['prenom'];
+	
 	if(isset($_SESSION['id_prof']))
 	{
-		echo"Vous etes profs";
+	header('Location: http://localhost/projet-INFO642/accEnseignant.php');
 	}
 
 	if(isset($_SESSION['id_etud']))
 	{
-		echo"Vous etes etudiant";
+		
+	header('Location: http://localhost/projet-INFO642/accEtudiant.php');
+
 	}
 
 	if(isset($_SESSION['id_serv']))
 	{
-		echo"Vous etes service";
+	header('Location: http://localhost/projet-INFO642/accTechnicien.php');
 	}
 
-	echo '<form id=deco method="post" action ="deconnexion.php">';
-	echo '<input type="submit" name="deconnexion" value="deconnexion">';
-
+	
 ?>

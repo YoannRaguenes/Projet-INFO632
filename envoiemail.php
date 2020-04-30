@@ -103,7 +103,7 @@
 			         </html>
 			         ';
 			    mail($recup_mail, "Récuperation de votre mot de passe sur Gestion Commande", $message, $header);
-			    header ("Location: http://localhost/projINFO642/envoiemail.php?section=code");    
+			    header ("Location: http://localhost/projet-INFO642/envoiemail.php?section=code");    
  				} 
  				else
  				{
@@ -131,7 +131,7 @@
  				$up_req = $base->prepare('UPDATE recuperation SET confirme = 1 WHERE email =?');
  				$up_req -> execute(array($_SESSION['recup_mail']));
  			
- 				header ("Location: http://localhost/projINFO642/envoiemail.php?section=changemdp");
+ 				header ("Location: http://localhost/projet-INFO642/envoiemail.php?section=changemdp");
  			}
  			else
  			{
@@ -165,7 +165,7 @@
 	 					$ins_mdp -> execute (array($mdp_hache, $_SESSION['recup_mail']));
 	 					$del_req = $base->prepare('DELETE FROM recuperation WHERE email = ?');
  						$del_req -> execute(array($_SESSION['recup_mail']));
-	 					header ("Location: http://localhost/projINFO642/connexion.php");
+	 					header ("Location: http://localhost/projet-INFO642/connexion.php");
 	 				}
 	 				else
 	 				{
