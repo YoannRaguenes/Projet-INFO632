@@ -20,7 +20,7 @@
        <p>
        Veuillez indiquer si la personne est :<br />
        <input type="radio" name="role" value="etu" id="etu" /> <label for="etu">Etudiant</label><br />
-       <input type="radio" name="role" value="enseignant" id="enseignat-25" /> <label for="enseignant-25">Enseignant</label><br />
+       <input type="radio" name="role" value="enseignant" id="enseignant-25" /> <label for="enseignant-25">Enseignant</label><br />
        <input type="radio" name="role" value="service" id="service" /> <label for="service">Du service Technique</label><br />
        </p>
 
@@ -55,7 +55,6 @@
       $prenom = $_POST['prenom'];
     	$email = $_POST['email'];
     	$mpd = passgen2(10);
-    	echo $email;
     	include('connect_bdd.php');
     	
     	// Hachage du mot de passe
@@ -75,9 +74,9 @@ if($_POST['role']=='etu'){
 $req = $bdd->prepare("INSERT INTO `etudiant`( `classe`,`id_perso`) VALUES (?,?)");
 $req->execute(array($_POST['classe'],$id_personne));
 }
-elseif ($_POST['role']== 'enseigant') {
+elseif ($_POST['role']== 'enseignant') {
 
-$req = $bdd->prepare("INSERT INTO `enseigant`(`departement`, `id_pers`) VALUES (?,?)");
+$req = $bdd->prepare("INSERT INTO `enseignant`(`departement`, `id_pers`) VALUES (?,?)");
 $req->execute(array($_POST['classe'], $id_personne));
   
 }
@@ -88,20 +87,19 @@ $req->execute(array($_POST['classe'],$id_personne));
 
 }
 
+$dest = $email;
+$sujet = "Création de votre compte ";
+$corps = "Bonjour, votre compte a été créer par l'administrateur, votre mot de passe est: " . $mpd;
+$headers = "From: adriensimard05@gmail.com";
+if (mail($dest, $sujet, $corps, $headers)) {
+  echo "Email envoyé avec succès";
+} else {
+  echo "Échec de l'envoi de l'email...";
+}
+
 
     }
     ?>
-<?php
-  $dest = $email;
-  $sujet = "Création de votre compte ";
-  $corp = "Bonjour, votre compte a été créer par l'administrateur, votre mot de passe est: " . $mpd;
-  $headers = "From: adriensimard05@gmail.com";
-  if (mail($dest, $sujet, $corp, $headers)) {
-    echo "Email envoyé avec succès";
-  } else {
-    echo "Échec de l'envoi de l'email...";
-  }
-?>
 </div>
   
   </body>
