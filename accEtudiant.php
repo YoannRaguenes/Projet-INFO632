@@ -31,18 +31,14 @@
 			<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
 			
 			</div>
-			<div id="notifTchat">
-			Notifications tchat
-			</div>
 			
-			<div id="Carrousel">
-			Carrousel d'images ?
-			</div>
 			
 
 		<div id="contenu">
-		Version Etudiant
-		<img src="images\logoPOPO.jpg" alt="" />
+			Version Etudiant
+			<div id="logopopo">
+			<img src="images\logoPOPO.jpg" alt="" />
+		</div>	
 		</div>
 		</div>
 
