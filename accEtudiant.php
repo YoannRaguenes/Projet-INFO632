@@ -9,12 +9,12 @@
 		<div id="entete">
 		
 			<div id="cadreConnec">
-			Nom d'utilisateur
+			<p>Nom d'utilisateur</p>
 			<p><a href="index.php">Se déconnecter</p></a>
 			</div>		
 		
 			<div id="Bienvenue">
-			<h2>Bienvenue sur la plateforme de commande de matériel</h2>
+			<h1>Bienvenue sur la plateforme de commande de matériel</h1>
 			</div>
 		
 			
@@ -29,18 +29,20 @@
 				<input type="submit" id='submit'onclick=window.location.href='page_3.php' value='MES DEMANDES' >
 				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
 				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
-				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >			
+				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
+
+				<div id="logopopo">
+				<img src="images\logoPOPO.jpg" alt="" />
+				</div>			
 			</div>
 			
 			
 
 		<div id="contenu">
-			Bienvenue Sur le site de demande de matériel!
+			Bienvenue sur le site de demande de matériel!
 			<br>
-			<p>Tu pourras ici y faire des demandes ainsi que consulter tes demandes en cours et ainsi en suivre l'avancement</p>
-			<div id="logopopo">
-			<img src="images\logoPOPO.jpg" alt="" />
-		</div>	
+			<p>Tu pourras y faire des demandes ainsi que consulter tes demandes en cours et ainsi en suivre l'avancement</p>
+			
 		</div>
 		</div>
 

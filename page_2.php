@@ -7,15 +7,20 @@
     <body>
 	
 		<div id="entete">
-			<h2 id="titre">Bienvenue sur la plateforme de commande de matériel</h2>
 		
 			<div id="cadreConnec">
-			Nom d'utilisateur
+			<p>Nom d'utilisateur</p>
 			<p><a href="index.php">Se déconnecter</p></a>
-			</div>
-			
+			</div>		
 		
+			<div id="Bienvenue">
+			<h1>Bienvenue sur la plateforme de commande de matériel</h1>
+			</div>
+		
+			
+			
 		</div>
+		
 
 		<div id="main">
 			<div id="menu">
@@ -24,20 +29,17 @@
 				<input type="submit" id='submit'onclick=window.location.href='page_3.php' value='MES DEMANDES' >
 				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
 				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
-				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >			
+				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
+
+				<div id="logopopo">
+				<img src="images\logoPOPO.jpg" alt="" />
+				</div>			
 			</div>
 			
-			<div id="notifTchat">
-			Notifications tchat
-			</div>
-			
-			<div id="Carrousel">
-			Carrousel d'images ?
-			</div>
 			
 
 		<div id="contenu">
-		<div id="form">
+			<div id="form">
 			<form action = 'ajout_demande.php' method='post'>
 				<fieldset>
 					<legend>Ajout Demande</legend>
@@ -55,12 +57,12 @@
 					<p><label>Mail pour suivi de l'avancement</label> : <input type='mail' name='mail' /></p>
 					<br>
 					<input type='submit' id='submit2' value='Ajouter'>
-				</fieldset>
+				
 			</form>
+		</fieldset>
 		
 		</div>
 		</div>
-
 		<div id="footer">
 		Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes
 		<p> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</p>
@@ -68,3 +70,17 @@
 		</div>
 	</body>
 </html>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
