@@ -1,6 +1,8 @@
  <?php 
- 	
+ 	session_start();
  	include('connect_bdd.php');
+
+
  	if(isset($_GET['section']))
  	{
  		$section =htmlspecialchars($_GET['section']);

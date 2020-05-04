@@ -49,6 +49,7 @@
 		 						$_SESSION['prenom'] = $userexist['prenom'];
 		 						$_SESSION['id_perso'] = $id_pers;
 		 						$_SESSION['id_etud'] = $id_etu;
+		 						$_SESSION['drois'] = 1;
  							}
  						
 	 						$prof_count = $prof ->rowCount();
