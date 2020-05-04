@@ -24,18 +24,20 @@
 
 		<div id="main">
 			<div id="menu">
-			<input type="submit" id='submit'onclick=window.location.href='page_2.php' value='FAIRE UNE DEMANDE' >
-			<input type="submit" id='submit' value='MES DEMANDES' >
-			<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
-			<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
-			<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
-			
+				<input type="submit" id='submit'onclick=window.location.href='accEtudiant.php' value='ACCUEIL' >
+				<input type="submit" id='submit'onclick=window.location.href='page_2.php' value='FAIRE UNE DEMANDE' >
+				<input type="submit" id='submit'onclick=window.location.href='page_3.php' value='MES DEMANDES' >
+				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
+				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
+				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >			
 			</div>
 			
 			
 
 		<div id="contenu">
-			Version Etudiant
+			Bienvenue Sur le site de demande de matériel!
+			<br>
+			<p>Tu pourras ici y faire des demandes ainsi que consulter tes demandes en cours et ainsi en suivre l'avancement</p>
 			<div id="logopopo">
 			<img src="images\logoPOPO.jpg" alt="" />
 		</div>	
