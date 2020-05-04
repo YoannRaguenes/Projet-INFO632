@@ -10,7 +10,7 @@
 		
 			<div id="cadreConnec">
 			Nom d'utilisateur
-			<p><a href="index.php">Se déconnecter</p></a>
+			<p><a href="deconnexion.php">Se déconnecter</p></a>
 			</div>		
 		
 			<div id="Bienvenue">
@@ -24,7 +24,7 @@
 
 		<div id="main">
 			<div id="menu">
-			<input type="submit" id='submit'onclick=window.location.href='page_2.php' value='DEMANDES EN ATTENTE' >
+			<input type="submit" id='submit'onclick=window.location.href='complete_demande.php' value='DEMANDES EN ATTENTE' >
 			<input type="submit" id='submit' value='DEMANDES TRAITEES' >
 			<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
 			<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
@@ -35,7 +35,7 @@
 			
 
 		<div id="contenu">
-			Version Etudiant
+			Version Enseignant
 			<div id="logopopo">
 			<img src="images\logoPOPO.jpg" alt="" />
 		</div>	
