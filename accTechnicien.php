@@ -24,18 +24,19 @@
 
 		<div id="main">
 			<div id="menu">
-			<input type="submit" id='submit'onclick=window.location.href='page_2.php' value='DEMANDES EN ATTENTE' >
-			<input type="submit" id='submit' value='DEMANDES TRAITEES' >
-			<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
-			<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
-			<input type="submit" id='submit' value='RESULTATS ENQUETE' >
-			
+				<input type="submit" id='submit'onclick=window.location.href='accTechnicien.php' value='ACCUEIL' >
+				<input type="submit" id='submit'onclick=window.location.href='demande_attente_technicien.php' value='DEMANDES EN ATTENTE' >
+				<input type="submit" id='submit'onclick=window.location.href='demande_traitees_technicien.php' value='DEMANDES TRAITEES' >
+				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
+				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
+				<input type="submit" id='submit' value='RESULTATS ENQUETE' >			
 			</div>
 			
 			
 
 		<div id="contenu">
-			Version Etudiant
+			Bienvenue sur la plateforme de demande matériel!
+			<p>Vous pourrez ici consulter toutes les demandes efféctuées par les élève ainsi que les enseignants pour du matériel pédagogique</p>
 			<div id="logopopo">
 			<img src="images\logoPOPO.jpg" alt="" />
 		</div>	

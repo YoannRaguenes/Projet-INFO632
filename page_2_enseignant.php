@@ -2,7 +2,7 @@
     <head>
 	
        <meta charset="utf-8">
-        <link rel="stylesheet" href="page_2_enseignant.css"  type="text/css" />
+        <link rel="stylesheet" href="accEtudiant.css"  type="text/css" />
     </head>
     <body>
 	
@@ -30,35 +30,37 @@
 				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
 				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
-				<div id="logopopo">
-					<img src="images\logoPOPO.jpg" alt="" />
-			</div>	
 			
-			</div>
+		</div>
 			
 			
 
 		<div id="contenu">
 			<?php
 				session_start();
-				$nom = "CIMPAN";
 				include("connect_bdd.php");
-				$sql =  "SELECT *
-						 FROM demande_materiel WHERE enseignant = '$nom'";
+				$sql =  "SELECT * FROM suivi_demande_materiel WHERE etat LIKE 'etat1'";
 						$sth = $base->prepare($sql);
 						$sth->execute();
 						$result = $sth->fetchAll();
 				echo "<form action = 'page_3_enseignant.php' method='post'>";
-				echo "<fieldset>";
-				echo "<legend>Consultation des demandes</legend>";
 				echo "<label>Demandes</label> : <select name='demande'>";
 						foreach ($result as $row) {
-						    echo "<option>".$row['description'];			}
+							$temp = $row['id_suivi'];
+							$sql = "SELECT * FROM toute_demandes WHERE id = '$temp'";
+							$sth = $base->prepare($sql);
+							$sth->execute();
+							$resultat = $sth->fetchAll();
+							foreach ($resultat as $rows) {
+ 						    	echo "<option>".$rows['description'];}			
+ 						}
 				echo "</select>";
 				echo "<input type='submit' id='bouton_consul' value='Consulter'>";
 				echo "</form>";	
 			?>
-			
+			<div id="logopopo">
+				<img src="images\logoPOPO.jpg" alt="" />
+			</div>	
 		</div>
 
 		<div id="footer">

@@ -24,14 +24,13 @@
 
 		<div id="main">
 			<div id="menu">
-				<input type="submit" id='submit'onclick=window.location.href='accEnseignant.php' value='ACCUEIL' >
-				<input type="submit" id='submit'onclick=window.location.href='page_2_enseignant.php' value='DEMANDES EN ATTENTE' >
-				<input type="submit" id='submit'onclick=window.location.href='demande_traitees_enseignant.php' value='DEMANDES TRAITEES' >
-				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
+				<input type="submit" id='submit'onclick=window.location.href='accTechnicien.php' value='ACCUEIL' >
+				<input type="submit" id='submit'onclick=window.location.href='demande_attente_technicien.php' value='DEMANDES EN ATTENTE' >
+				<input type="submit" id='submit'onclick=window.location.href='demande_traitees_technicien.php' value='DEMANDES TRAITEES' >
+				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
-				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
-			
-		</div>
+				<input type="submit" id='submit' value='RESULTATS ENQUETE' >			
+			</div>
 			
 			
 
@@ -39,11 +38,11 @@
 			<?php
 				session_start();
 				include("connect_bdd.php");
-				$sql =  "SELECT * FROM suivi_demande_materiel WHERE etat LIKE 'etat2'";
+				$sql =  "SELECT * FROM suivi_demande_materiel WHERE etat LIKE 'etat3'";
 						$sth = $base->prepare($sql);
 						$sth->execute();
 						$result = $sth->fetchAll();
-				echo "<form action = 'page_3_enseignant.php' method='post'>";
+				echo "<form action = 'demande_validation_technicien.php' method='post'>";
 				echo "<label>Demandes</label> : <select name='demande'>";
 						foreach ($result as $row) {
 							$temp = $row['id_suivi'];
@@ -59,8 +58,9 @@
 				echo "</form>";	
 			?>
 			<div id="logopopo">
-				<img src="images\logoPOPO.jpg" alt="" />
-			</div>	
+			<img src="images\logoPOPO.jpg" alt="" />
+		</div>	
+		</div>
 		</div>
 
 		<div id="footer">

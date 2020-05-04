@@ -2,14 +2,14 @@
     <head>
 	
        <meta charset="utf-8">
-        <link rel="stylesheet" href="accEnseignant.css"  type="text/css" />
+        <link rel="stylesheet" href="accEtudiant.css"  type="text/css" />
     </head>
     <body>
 	
 		<div id="entete">
 		
 			<div id="cadreConnec">
-			<p>Nom d'utilisateur</p>
+			Nom d'utilisateur
 			<p><a href="index.php">Se déconnecter</p></a>
 			</div>		
 		
@@ -30,9 +30,6 @@
 				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
 				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
-				<div id="logopopo">
-				<img src="images\logoPOPO.jpg" alt="" />
-			</div>	
 			
 			</div>
 			
@@ -41,7 +38,9 @@
 		<div id="contenu">
 			Bienvenue sur la plateforme de consulations des demandes de matériel!
 			<p>Vous pourrez ici consulter les demandes matériel de vos étudiant ainsi que les compléter avant de les envoyer au service technique</p>
-			
+			<div id="logopopo">
+			<img src="images\logoPOPO.jpg" alt="" />
+		</div>	
 		</div>
 		</div>
 
