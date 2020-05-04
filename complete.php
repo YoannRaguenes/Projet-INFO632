@@ -1,7 +1,7 @@
 <?php
 	include("connect_bdd.php");
 	$demande = $_POST['demande'];	
-	$sql = "SELECT * FROM toute_demandes WHERE description = '".$demande."'";
+	$sql = "SELECT * FROM demande_materiel WHERE description = '".$demande."'";
 	$sth = $base->prepare($sql);
 	$sth->execute();
 	$result = $sth->fetchAll();
@@ -16,12 +16,7 @@
 	$lien = $result[0][8];
 	$image = $result[0][9];
 	$jour = $result[0][10];
-	$mail = $result[0][11];
-	$ue = $result[0][12];
-	$nom = $result[0][13];
-	$description_e = $result[0][14];
-	$commentaire = $result[0][15];	
-
+	$mail = $result[0][11];	
 ?>
 <body>
 	<h2 id="titre">Consultation de la demande</h2>
@@ -53,19 +48,16 @@
 					echo "<br>";
 					echo "Mail du demandeur :",$mail;
 					echo "<br>";
-					echo "Nom de l'enseignant:",$nom;
-					echo "<br>";
-					echo "UE enseigné:",$ue;
-					echo "<br>";
-					echo "Description supplémentaire du projet :",$description_e;
-					echo "<br>";
-					echo "Commentaire de l'enseignant :",$commentaire;
-					echo "<br>";
-					echo "<form action = 'validation_demande_technique.php' method='post'>";
-					echo "<p><label>Id de la demande que vous voulez valider</label> : <input type='text' name='id' /></p>";
+					echo "<form action = 'validation_demande_enseignant.php' method='post'>";
+					echo "<p><label>Id de la demande</label> : <input type='text' name='id' /></p>";
+					echo "<p><label>Nom de L'UE</label> : <input type='text' name='ue' /></p>";
+					echo "<p><label>Nom du professeur</label> : <input type='text' name='nom' /></p>";
+					echo "<p><label>Description supplémentaire du projet</label> : <textarea type='text' name='description_e'></textarea></p>";
+					echo "<p><label>Eventuel commentaire</label> : <textarea type='text' name='commentaire'></textarea></p>";
 					echo "<input type='submit' id='bouton_valider' value='Valider'>";
 					echo "</form>";
 					?>
+
 		</fieldset>
 	</div>
 </body>

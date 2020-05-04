@@ -42,6 +42,7 @@
 					<legend>Ajout Demande</legend>
 					<p><label>Numéro etudiant</label> : <input type='text' name='numero' /></p>
 					<p><label>Description du projet</label> : <textarea type='text' name='description'></textarea></p>
+					<p><label>Nom de l'enseignant (en majuscule)</label> : <input type='text' name='enseignant' /></p>
 					<p><label>Ligne budgétaire</label> : <input type='number' name='budget' /></p>
 					<p><label>Produits concernés</label> : <input type='text' name='produits' /></p>
 					<p><label>Quantité</label> : <input type='text' name='quantite' /></p>
