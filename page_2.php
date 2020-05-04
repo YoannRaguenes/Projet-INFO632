@@ -9,8 +9,9 @@
 		<div id="entete">
 		
 			<div id="cadreConnec">
-			<p>Nom d'utilisateur</p>
-			<p><a href="index.php">Se déconnecter</p></a>
+			Nom d'utilisateur
+			<p></p>
+			<a href="déconnexion.php">Se déconnecter</a>
 			</div>		
 		
 			<div id="Bienvenue">
@@ -37,13 +38,14 @@
 			</div>
 			
 			
+			
 
 		<div id="contenu">
 			<div id="form">
 			<form action = 'ajout_demande.php' method='post'>
 				<fieldset>
 					<legend>Ajout Demande</legend>
-					<p><label>Numéro etudiant</label> : <input type='text' name='numero' /></p>
+					<p><label>Numéro étudiant</label> : <input type='text' name='numero' /></p>
 					<p><label>Description du projet</label> : <textarea type='text' name='description'></textarea></p>
 					<p><label>Nom de l'enseignant (en majuscule)</label> : <input type='text' name='enseignant' /></p>
 					<p><label>Ligne budgétaire</label> : <input type='number' name='budget' /></p>
@@ -63,11 +65,14 @@
 		
 		</div>
 		</div>
-		<div id="footer">
-		Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes
-		<p> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</p>
-			
 		</div>
+		<div id="footer">
+			<div id="credits">
+			<br>Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes</br>
+			<br> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</br>
+			</div>
+			</div>
+		
 	</body>
 </html>	
 

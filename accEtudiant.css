@@ -5,7 +5,7 @@ body{
 }
 
 img{
-	width: 100%;
+	width: 90%;
 	height: auto;
 	margin:auto;
 	
@@ -72,6 +72,11 @@ float:right;
 margin:auto;
 border: 1px solid #fff;
 border-radius: 1em;
+}
+
+#video{
+margin:auto;
+position:absolute;top:20%;left:20%;right:40%;bottom:0;transform:translateX(-20%);
 }
 
 

@@ -50,6 +50,7 @@ margin:auto;
 height:100%
 width:100%;
 }
+
 #menu  {
 float:left;
 width:18%;
@@ -67,7 +68,7 @@ border-radius: 1em;
 text-align:center;
 margin-left:245px;
 background-color:#4682B4;
-height:93%;
+height:88%;
 width:81.5%;
 float:right;
 margin:auto;
@@ -88,6 +89,11 @@ font-family:  "Luxi Sans", sans-serif;
     margin-top: 10%
     border: 1px solid #fff;
     border-radius: 1em;
+}
+#barre_init {
+margin:auto;
+height:80%;	
+	
 }
 
 legend{
@@ -135,7 +141,7 @@ margin:auto;
 
 }	
 
-#submit2{
+#bouton_consul{
   background-color: #000;
   margin-left: 5%;
   padding : 10px 50px;
