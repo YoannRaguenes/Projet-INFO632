@@ -91,6 +91,7 @@ font-family:  "Luxi Sans", sans-serif;
 legend{
     width:40%;
     margin-left: 5%;
+    margin:auto;
     background-color: #000;
     color: #fff;
     padding: 3px 6px;
@@ -103,6 +104,7 @@ label {
   display: inline-block;
   width: 150px;
   text-align: right;
+  margin:auto;
 }
 
 p{
@@ -120,7 +122,9 @@ text-align:center;
 clear:both;
 height:40%;
 width:100%;
+margin:auto;
 }
+
 #submit2{
   background-color: #000;
   margin-left: 5%;

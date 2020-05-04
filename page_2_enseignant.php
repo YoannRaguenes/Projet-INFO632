@@ -2,7 +2,7 @@
     <head>
 	
        <meta charset="utf-8">
-        <link rel="stylesheet" href="accEtudiant.css"  type="text/css" />
+        <link rel="stylesheet" href="page_2_enseignant.css"  type="text/css" />
     </head>
     <body>
 	
@@ -30,8 +30,11 @@
 				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
 				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
+				<div id="logopopo">
+					<img src="images\logoPOPO.jpg" alt="" />
+			</div>	
 			
-		</div>
+			</div>
 			
 			
 
@@ -55,9 +58,7 @@
 				echo "<input type='submit' id='bouton_consul' value='Consulter'>";
 				echo "</form>";	
 			?>
-			<div id="logopopo">
-				<img src="images\logoPOPO.jpg" alt="" />
-			</div>	
+			
 		</div>
 
 		<div id="footer">

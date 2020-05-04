@@ -5,12 +5,12 @@ body{
 }
 
 img{
-    width: 100%;
-    height: auto;
-    margin:auto;
-    
-    
-    
+  width: 100%;
+  height: auto;
+  margin:auto;
+  
+  
+  
 }
 
 #entete, #menu, #contenu, #footer  {
@@ -61,7 +61,7 @@ border-radius: 1em;
 }
 
 
-    
+  
 #contenu {
 text-align:center;
 margin-left:245px;
@@ -72,7 +72,44 @@ float:right;
 margin:auto;
 border: 1px solid #fff;
 border-radius: 1em;
+font-family:  "Luxi Sans", sans-serif;
 }
+
+
+#form{
+    margin: auto;
+    width: 98%;
+    padding: 10px;
+    
+    background-color: #4682B4;
+    text-align: center; 
+    margin-top: 10%
+    border: 1px solid #fff;
+    border-radius: 1em;
+}
+
+legend{
+    width:40%;
+    margin-left: 5%;
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+    text-align: center;
+    font-family:  "Luxi Sans", sans-serif;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+
+p{
+    color: #fff;
+    font-family:  "Luxi Sans", sans-serif;
+}
+
 
 
 
@@ -81,8 +118,17 @@ border-radius: 1em;
 background-color:#0A8BBF;
 text-align:center;
 clear:both;
-height:100;
+height:40%;
 width:100%;
+}
+#bouton_consul{
+  background-color: #000;
+  margin-left: 5%;
+  padding : 10px 50px;
+  color: white;
+  border:none;
+  cursor:pointer;
+  width: 15%;
 }
 
 
@@ -96,8 +142,14 @@ input[type=submit] {
     cursor: pointer;
     width: 100%;
     height:10%;
-    
+  
 }
+
+
+
+
+
+
 
 
 
