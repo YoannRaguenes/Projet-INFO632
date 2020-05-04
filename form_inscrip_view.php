@@ -6,10 +6,12 @@
     <title>Création de compte</title>
     <meta content="info">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="gestion_batiment.css" />
+    <link rel="stylesheet" href="inscrip.css" />
   </head>
   
   <body id='fond'>
+
+
  <div>
  	<h1> Créer un compte </h1>
  	
@@ -41,7 +43,7 @@
        <input type="submit" value="Valider" />
    </fieldset>
        </form>
-<?php 
+      <?php 
                     if(isset($erreur))
                     {
                         echo '<span style="color:red">'.$erreur.'</span>';
@@ -50,9 +52,11 @@
                     {
                         echo'<br />';
                     }    
-                ?>
+      ?>
 
 </div>
+
+
   
   </body>
 </html> 
