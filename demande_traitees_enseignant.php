@@ -31,17 +31,29 @@
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
 				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
 			
-			</div>
+		</div>
 			
 			
 
 		<div id="contenu">
-			Bienvenue sur la plateforme de consulations des demandes de matériel!
-			<p>Vous pourrez ici consulter les demandes matériel de vos étudiant ainsi que les compléter avant de les envoyer au service technique</p>
+			<?php
+				session_start();
+				$nom = "CIMPAN";
+				include("connect_bdd.php");
+				$sql =  "SELECT * FROM toute_demandes WHERE UE IS NOT NULL AND nom = '$nom'";
+						$sth = $base->prepare($sql);
+						$sth->execute();
+						$result = $sth->fetchAll();
+				echo "<fieldset>";
+				echo "<legend>Consultation des demandes traitées</legend>";
+				echo "<label>Demandes</label> : <select name='demande'>";
+						foreach ($result as $row) {
+						    echo "<option>".$row['description'];			}
+				echo "</select>";	
+			?>
 			<div id="logopopo">
-			<img src="images\logoPOPO.jpg" alt="" />
-		</div>	
-		</div>
+				<img src="images\logoPOPO.jpg" alt="" />
+			</div>	
 		</div>
 
 		<div id="footer">
