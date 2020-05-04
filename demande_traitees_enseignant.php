@@ -2,7 +2,7 @@
     <head>
 	
        <meta charset="utf-8">
-        <link rel="stylesheet" href="accEtudiant.css"  type="text/css" />
+        <link rel="stylesheet" href="demande_traitees_enseignant.css"  type="text/css" />
     </head>
     <body>
 	
@@ -30,6 +30,9 @@
 				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
 				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
+				<div id="logopopo">
+				<img src="images\logoPOPO.jpg" alt="" />
+			</div>	
 			
 		</div>
 			
@@ -51,9 +54,7 @@
 						    echo "<option>".$row['description'];			}
 				echo "</select>";	
 			?>
-			<div id="logopopo">
-				<img src="images\logoPOPO.jpg" alt="" />
-			</div>	
+			
 		</div>
 
 		<div id="footer">
