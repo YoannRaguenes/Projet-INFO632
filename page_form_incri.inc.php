@@ -30,26 +30,25 @@
        <p><label for="prenom">Prénom :</label>
        <input type="text" name="prenom" id="prenom" /></p>
 
-       <p><label for="classe">classe ou département :</label>
+       <p><label for="classe">classe ou département :</label> 
        <input type="text" name="classe" id="classe" /></p>
 
 
        <p><label for="email">Email :</label>
        <input type="email" name="email" id="email" /></p>
  
-      <p> <label for="mpd">Générer mot de passe :</label>
-       <input type="radio" name="mpd" id="mpd" /></p>
+  
         
        <input type="submit" value="Valider" />
    </fieldset>
-       </form>;
+       </form>
     
     
     <?php
     function passgen2($nbChar){
     return substr(str_shuffle(
 'abcdefghijklmnopqrstuvwxyzABCEFGHIJKLMNOPQRSTUVWXYZ0123456789'),1, $nbChar); }
-    if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['mpd']) && isset($_POST['role'])){
+    if(isset($_POST['nom']) && isset($_POST['email'])&& isset($_POST['role'])){
 
     	$nom = $_POST['nom'];
       $prenom = $_POST['prenom'];
@@ -57,32 +56,32 @@
     	$mpd = passgen2(10);
     	include('connect_bdd.php');
     	
-    	// Hachage du mot de passe
-$pass_hache = password_hash($_POST['mpd'], PASSWORD_DEFAULT);
+    	// Hachage du mot de passe 
+$pass_hache = password_hash($mpd, PASSWORD_DEFAULT);
 
 // Insertion
-$req = $bdd->prepare("INSERT INTO personne (nom, prenom, email, password) VALUES (?,?,?,?)");
+$req = $base->prepare("INSERT INTO personne (nom, prenom, email, password) VALUES (?,?,?,?)");
 $req->execute(array( $nom, $prenom, $email, $pass_hache));
 
 $sql ="SELECT `id_personne` FROM `personne` WHERE email='$email'";
-$req =$bdd->prepare($sql);
+$req =$base->prepare($sql);
 $req->execute();
 $result = $req-> fetchAll();
 $id_personne = $result[0][0];
 
 if($_POST['role']=='etu'){
-$req = $bdd->prepare("INSERT INTO `etudiant`( `classe`,`id_perso`) VALUES (?,?)");
+$req = $base->prepare("INSERT INTO `etudiant`( `classe`,`id_perso`) VALUES (?,?)");
 $req->execute(array($_POST['classe'],$id_personne));
 }
 elseif ($_POST['role']== 'enseignant') {
 
-$req = $bdd->prepare("INSERT INTO `enseignant`(`departement`, `id_pers`) VALUES (?,?)");
+$req = $base->prepare("INSERT INTO `enseignant`(`departement`, `id_pers`) VALUES (?,?)");
 $req->execute(array($_POST['classe'], $id_personne));
   
 }
 else{
 
-$req = $bdd->prepare("INSERT INTO `service_technique`(`departement`, `id_person`) VALUES (?,?)");
+$req = $base->prepare("INSERT INTO `service_technique`(`departement`, `id_person`) VALUES (?,?)");
 $req->execute(array($_POST['classe'],$id_personne));
 
 }
