@@ -40,7 +40,7 @@
 
 		<div id="contenu">
 			<?php
-				session_start();
+				
 				include("connect_bdd.php");
 				$sql =  "SELECT * FROM suivi_demande_materiel WHERE etat NOT LIKE 'etat3'";
 						$sth = $base->prepare($sql);
