@@ -19,7 +19,7 @@
 
 
                 //Verification si l'email est deja dans la bdd personne
-                $mail_exist = $bdd->prepare('SELECT id_personne FROM personne WHERE email = ?');
+                $mail_exist = $base->prepare('SELECT id_personne FROM personne WHERE email = ?');
                 $mail_exist->execute(array($email));
                 $mail_verif_exist = $mail_exist->rowCount();
 
@@ -33,37 +33,37 @@
                       $pass_hache = password_hash($mpd, PASSWORD_DEFAULT);
 
                       // Insertion
-                      $req = $bdd->prepare("INSERT INTO personne (nom, prenom, email, password) VALUES (?,?,?,?)");
+                      $req = $base->prepare("INSERT INTO personne (nom, prenom, email, password) VALUES (?,?,?,?)");
                       $req->execute(array( $nom, $prenom, $email, $pass_hache));
 
                       $sql ="SELECT `id_personne` FROM `personne` WHERE email='$email'";
-                      $req =$bdd->prepare($sql);
+                      $req =$base->prepare($sql);
                       $req->execute();
                       $result = $req-> fetchAll();
                       $id_personne = $result[0][0];
 
                       if($_POST['role']=='etu')
                       {
-                        $req = $bdd->prepare("INSERT INTO `etudiant`( `classe`,`id_perso`) VALUES (?,?)");
-                        $req->execute(array($_POST['classe'],$id_personne));
+                        $req = $base->prepare("INSERT INTO `etudiant`( `classe`,`id_perso`, numero) VALUES (?,?,?)");
+                        $req->execute(array($_POST['classe'],$id_personne, $_POST['numero']));
                       }
                       elseif ($_POST['role']== 'enseignant') 
                       {
 
-                        $req = $bdd->prepare("INSERT INTO `enseignant`(`departement`, `id_pers`) VALUES (?,?)");
+                        $req = $base->prepare("INSERT INTO `enseignant`(`departement`, `id_pers`) VALUES (?,?)");
                         $req->execute(array($_POST['classe'], $id_personne));
                         
                       }
                       else
                       {
 
-                          $req = $bdd->prepare("INSERT INTO `service_technique`(`departement`, `id_person`) VALUES (?,?)");
+                          $req = $base->prepare("INSERT INTO `service_technique`(`departement`, `id_person`) VALUES (?,?)");
                           $req->execute(array($_POST['classe'],$id_personne));
 
                       }
           
                         $dest = $email;
-                        echo $dest ;
+                        
                         $sujet = "Création de votre compte ";
                         $corps = "Bonjour, votre compte a été créer par l'administrateur, votre mot de passe est: " . $mpd;
                         $headers = "From: adriensimard05@gmail.com";
@@ -83,7 +83,7 @@
 
     }
 
-require_once('form_inscrip_view.php');
+  require_once('form_inscrip_view.php');
 
 
-    ?>
+      ?>

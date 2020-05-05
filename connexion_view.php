@@ -34,11 +34,12 @@
 	            		echo'<br />';
 	            	}	
 	            ?>
-	            </p>
-
+	            
+	            <p>
 	            <a  href="envoiemail.php">Mot de passe oublié ?</a>
 	            <div id = "logo">
     			 	<img src="images\logoPOPO.jpg" alt="" />
+    			</p>
     			</div>
 
 	        </div>

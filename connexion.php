@@ -43,13 +43,20 @@
 	 						$etudiant_count = $etudiant ->rowCount();
  							if($etudiant_count == 1)
  							{
+
+ 								$numetu = $base ->prepare ("SELECT numero FROM etudiant WHERE id_perso = '$id_pers' ");
+						 		$numetu ->execute();
+						 		$rez = $numetu ->fetch();
+						 		$num_etu = $rez[0];
+
  								session_start();
 	 							$_SESSION['email'] = $mail;
 		 						$_SESSION['nom'] = $userexist['nom'];
 		 						$_SESSION['prenom'] = $userexist['prenom'];
 		 						$_SESSION['id_perso'] = $id_pers;
 		 						$_SESSION['id_etud'] = $id_etu;
-		 						$_SESSION['drois'] = 1;
+		 						$_SESSION['num_etu'] = $num_etu;
+		 						
  							}
  						
 	 						$prof_count = $prof ->rowCount();

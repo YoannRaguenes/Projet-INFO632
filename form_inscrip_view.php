@@ -6,18 +6,32 @@
     <title>Création de compte</title>
     <meta content="info">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="inscrip.css" />
+    <link rel="stylesheet" href="admin.css" />
   </head>
   
   <body id='fond'>
+       <p id=titre>
+      <?php 
+                    if(isset($erreur))
+                    {
+                        echo '<span style="color:red">'.$erreur.'</span>';
+                    }
+                    elseif (isset($ok)) {
+                      echo '<span style="color:green">'.$ok.'</span>';
+                    }
+                    else 
+                    {
+                        echo'<br />';
+                    }    
+      ?>
+    </p>
 
+ <div id = compte>
 
- <div>
- 	<h1> Créer un compte </h1>
  	
-<form method="POST">
+<form method="POST" id = formul>
 	<fieldset>
- 		<legend> Coordonnées </legend>
+ 		<legend> Création de compte </legend>
 
        <p>
        Veuillez indiquer si la personne est :<br />
@@ -26,7 +40,7 @@
        <input type="radio" name="role" value="service" id="service" /> <label for="service">Du service Technique</label><br />
        </p>
 
-       <p><label for="nom">Nom :</label>
+       <p><label for="nom">Nom (en majuscule) :</label>
        <input type="text" name="nom" id="nom" /></p>
 
        <p><label for="prenom">Prénom :</label>
@@ -38,21 +52,16 @@
 
        <p><label for="email">Email :</label>
        <input type="email" name="email" id="email" /></p>
+
+       <p><label for="numero">Numero Etudiant:</label>
+       <input type="number" name="numero" id="numero" /></p>
  
         
        <input type="submit" value="Valider" />
+
+       <a href = "form_delete.php">Supprimer un compte </a>
    </fieldset>
        </form>
-      <?php 
-                    if(isset($erreur))
-                    {
-                        echo '<span style="color:red">'.$erreur.'</span>';
-                    }
-                    else 
-                    {
-                        echo'<br />';
-                    }    
-      ?>
 
 </div>
 

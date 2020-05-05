@@ -3,59 +3,54 @@
 <html>
 
   <head>
-    <title>Création de compte</title>
+    <title>Suppression de compte</title>
     <meta content="info">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="form_inscrip.css" />
+    <link rel="stylesheet" href="admin.css" />
   </head>
   
   <body id='fond'>
- <div>
-  <h1> Supprimer un compte </h1>
-  
-<form method="POST">
-
-     <?php
-     include('connect_bdd.php');
-
-
-        $sql ="SELECT id_personne, nom, prenom, email FROM personne";
-        $sth = $bdd->prepare($sql);
-        $sth->execute();
-        $result = $sth->fetchAll();
-        echo"<form method = 'POST' action ='delete.php'>";
-        echo"<table id=table>
-            <thead>
-              <tr>
-                <th id=th> Id </th>
-                <th id=th> Nom </th>
-                <th id=th> Prenom </th>
-                <th id=th> Email </th>
-
-              </tr>
-            </thead>
-            <tbody>";
-             
-            foreach ($result as $row){
-
-              echo"
-                <tr>
-                  <td id=td> ". $row['id_personne']."</td>
-                  <td id=td> ". $row['nom']."</td>
-                  <td id=td>". $row['prenom']."</td>
-                  <td id=td>". $row['email']."</td>
-                  <td id=td> <input type='checkbox' name='check' value></td> 
-
-                </tr>";
-
-            }
-        echo"</tbody> </table>";
-        echo"<input type='submit' name ='supprimer' Value = 'Suppression'>";
-        echo"</form>";
-
+       <p id=titre>
+      <?php 
+                    if(isset($erreur))
+                    {
+                        echo '<span style="color:red">'.$erreur.'</span>';
+                    }
+                    elseif (isset($ok)) {
+                      echo '<span style="color:green">'.$ok.'</span>';
+                    }
+                    else 
+                    {
+                        echo'<br />';
+                    }    
       ?>
+    </p>
+
+ <div id = compte>
+
+  
+<form method="POST" id = formul>
+  <fieldset>
+    <legend> Suppression de compte </legend>
+
+       <p>
+       Veuillez indiquer si la personne est :<br />
+       <input type="radio" name="role" value="etu" id="etu" /> <label for="etu">Etudiant</label><br />
+       <input type="radio" name="role" value="enseignant" id="enseignant-25" /> <label for="enseignant-25">Enseignant</label><br />
+       <input type="radio" name="role" value="service" id="service" /> <label for="service">Du service Technique</label><br />
+       </p>
 
 
+
+       <p><label for="email">Email :</label>
+       <input type="email" name="email" id="email" /></p>
+
+        
+       <input type="submit" value="Suprrimer" />
+
+       <a href = "form_inscript.php">Créer un compte </a>
+   </fieldset>
+       </form>
 
 </div>
 
