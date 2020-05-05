@@ -64,7 +64,7 @@ border-radius: 1em;
 	
 #contenu {
 text-align:center;
-margin-left:245px;
+
 background-color:#4682B4;
 height:82%;
 width:81.5%;
@@ -74,10 +74,11 @@ border: 1px solid #fff;
 border-radius: 1em;
 }
 
-#video{
+.video{
 margin:auto;
 width:10;
-position:absolute;top:20%;left:20%;right:40%;bottom:0;transform:translateX(-20%);
+height:20;
+
 }
 
 

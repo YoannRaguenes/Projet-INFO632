@@ -1,3 +1,5 @@
+<?php session_start()?>
+
 <html>
     <head>
 	
@@ -9,8 +11,9 @@
 		<div id="entete">
 		
 			<div id="cadreConnec">
-			Nom d'utilisateur
-			<p><a href="index.php">Se déconnecter</p></a>
+			 <?php $_SESSION['nom']." ".$_SESSION['prenom']?> 
+			
+			<p><a href="deconnexion.php">Se déconnecter</p></a>
 			</div>		
 		
 			<div id="Bienvenue">
@@ -42,7 +45,7 @@
 			<br>
 			<p>Tu pourras ici y faire des demandes ainsi que consulter tes demandes en cours et ainsi en suivre l'avancement</p>
 			
-			<video preload="auto" loop="" muted="" autoplay="" playsinline="">
+			<video width=1000 height=500 preload="auto" loop="" muted="" autoplay="" playsinline="">
                 <source src="HomePolytech.mp4" type="video/mp4">
                                            
             </video>
