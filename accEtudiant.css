@@ -76,6 +76,7 @@ border-radius: 1em;
 
 #video{
 margin:auto;
+width:10;
 position:absolute;top:20%;left:20%;right:40%;bottom:0;transform:translateX(-20%);
 }
 
