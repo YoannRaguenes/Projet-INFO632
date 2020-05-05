@@ -1,3 +1,4 @@
+<?php session_start()?>
 <html>
     <head>
 	
@@ -9,8 +10,8 @@
 		<div id="entete">
 			
 			<div id="cadreConnec">
-			Nom d'utilisateur
-			<p><a href="index.php">Se déconnecter</p></a>
+			<?php $_SESSION['nom']." ".$_SESSION['prenom']?>
+			<p><a href="deconnexion.php">Se déconnecter</p></a>
 			</div>
 			
 			<div id="Bienvenue">
@@ -39,7 +40,7 @@
 		<div id="contenu">
 			<?php
 			$numero = "11704669";					
-			session_start();
+			
 			include("connect_bdd.php");
 			$sql =  "SELECT *
 					 FROM demande_materiel WHERE numero = '$numero'";

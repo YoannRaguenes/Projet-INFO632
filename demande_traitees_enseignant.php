@@ -1,20 +1,21 @@
+<?php session_start()?>
 <html>
     <head>
 	
        <meta charset="utf-8">
-        <link rel="stylesheet" href="accEtudiant.css"  type="text/css" />
+        <link rel="stylesheet" href="demande_traitees_enseignant.css"  type="text/css" />
     </head>
     <body>
 	
 		<div id="entete">
 		
 			<div id="cadreConnec">
-			Nom d'utilisateur
-			<p><a href="index.php">Se déconnecter</p></a>
+			<?php $_SESSION['nom']." ".$_SESSION['prenom']?>
+			<p><a href="deconnexion.php">Se déconnecter</p></a>
 			</div>		
 		
 			<div id="Bienvenue">
-			<h2>Bienvenue sur la plateforme de commande de matériel</h2>
+			<h1>Bienvenue sur la plateforme de commande de matériel</h1>
 			</div>
 		
 			
@@ -30,6 +31,9 @@
 				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
 				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >
+				<div id="logopopo">
+				<img src="images\logoPOPO.jpg" alt="" />
+			</div>
 			
 		</div>
 			
@@ -37,18 +41,22 @@
 
 		<div id="contenu">
 			<?php
-				session_start();
-				$nom = "NEPAUL";
+				
 				include("connect_bdd.php");
 				$sql =  "SELECT * FROM suivi_demande_materiel WHERE etat LIKE 'etat2'";
 						$sth = $base->prepare($sql);
 						$sth->execute();
 						$result = $sth->fetchAll();
-				echo "<form action = 'affichage_dem_traitees.php' method='post'>";
+						?>
+		<div id="form">
+			<form action = 'affichage_dem_traitees.php' method='post'>
+				<fieldset>
+					<legend>Consultation des demandes traitées</legend>
+				<?php
 				echo "<label>Demandes</label> : <select name='demande'>";
 						foreach ($result as $row) {
 							$temp = $row['id_suivi'];
-							$sql = "SELECT * FROM toute_demandes WHERE id = '$temp' AND nom = '$nom'";
+							$sql = "SELECT * FROM toute_demandes WHERE id = '$temp'";
 							$sth = $base->prepare($sql);
 							$sth->execute();
 							$resultat = $sth->fetchAll();
@@ -56,17 +64,17 @@
  						    	echo "<option>".$rows['description'];}			
  						}
 				echo "</select>";
-				echo "<input type='submit' id='bouton_consul' value='Consulter'>";
-				echo "</form>";	
-			?>
-			<div id="logopopo">
-				<img src="images\logoPOPO.jpg" alt="" />
-			</div>	
+				?>
+				<input type='submit' id='bouton_consul' value='Consulter'>
+				</fieldset>
+				</form>
+			
+		</div>		
 		</div>
 
 		<div id="footer">
-		Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes
-		<p> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</p>
+		<br>Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes</br>
+		<br>Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</br>
 			
 		</div>
 	</body>
