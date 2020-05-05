@@ -1,3 +1,4 @@
+<?php session_start()?>
 <html>
     <head>
 	
@@ -9,8 +10,8 @@
 		<div id="entete">
 		
 			<div id="cadreConnec">
-			Nom d'utilisateur
-			<p><a href="index.php">Se déconnecter</p></a>
+			<?php $_SESSION['nom']." ".$_SESSION['prenom']?>
+			<p><a href="deconnexion.php">Se déconnecter</p></a>
 			</div>		
 		
 			<div id="Bienvenue">

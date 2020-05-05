@@ -1,16 +1,17 @@
+<?php session_start()?>
 <html>
     <head>
 	
        <meta charset="utf-8">
-        <link rel="stylesheet" href="accEtudiant.css"  type="text/css" />
+        <link rel="stylesheet" href="accEnseignant.css"  type="text/css" />
     </head>
     <body>
 	
 		<div id="entete">
 		
 			<div id="cadreConnec">
-			Nom d'utilisateur
-			<p><a href="index.php">Se déconnecter</p></a>
+			<?php $_SESSION['nom']." ".$_SESSION['prenom']?>
+			<p><a href="deconnexion.php">Se déconnecter</p></a>
 			</div>		
 		
 			<div id="Bienvenue">
