@@ -148,8 +148,8 @@
 		</div>
 
 		<div id="footer">
-		Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes
-		<p> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</p>
+		<br>Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes</br>
+		<br> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</br>
 			
 		</div>
 	</body>
