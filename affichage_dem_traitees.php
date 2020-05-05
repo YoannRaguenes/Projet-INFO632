@@ -2,7 +2,7 @@
     <head>
 	
        <meta charset="utf-8">
-        <link rel="stylesheet" href="accEtudiant.css"  type="text/css" />
+        <link rel="stylesheet" href="affichage_dem_traitees.css"  type="text/css" />
     </head>
     <body>
 	
@@ -14,7 +14,7 @@
 			</div>		
 		
 			<div id="Bienvenue">
-			<h2>Bienvenue sur la plateforme de commande de matériel</h2>
+			<h1>Bienvenue sur la plateforme de commande de matériel</h1>
 			</div>
 		
 			
@@ -29,7 +29,10 @@
 				<input type="submit" id='submit'onclick=window.location.href='demande_traitees_technicien.php' value='DEMANDES TRAITEES' >
 				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
-				<input type="submit" id='submit' value='RESULTATS ENQUETE' >			
+				<input type="submit" id='submit' value='RESULTATS ENQUETE' >
+				<div id="logopopo">
+				<img src="images\logoPOPO.jpg" alt="" />
+			</div>
 			</div>
 			
 			
@@ -97,15 +100,13 @@
 					echo "</form>";
 					?>
 			</fieldset>
-			<div id="logopopo">
-				<img src="images\logoPOPO.jpg" alt="" />
-			</div>	
+				
 		</div>
 		</div>
 
 		<div id="footer">
-		Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes
-		<p> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</p>
+		<br>Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes</br>
+		<br> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</br>
 			
 		</div>
 	</body>
