@@ -43,7 +43,7 @@
 						$sth = $base->prepare($sql);
 						$sth->execute();
 						$result = $sth->fetchAll();
-				echo "<form action = 'page_3_enseignant.php' method='post'>";
+				echo "<form action = 'affichage_dem_traitees.php' method='post'>";
 				echo "<label>Demandes</label> : <select name='demande'>";
 						foreach ($result as $row) {
 							$temp = $row['id_suivi'];
