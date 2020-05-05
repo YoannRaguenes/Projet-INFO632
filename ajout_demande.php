@@ -40,9 +40,9 @@
 		$sql = "INSERT INTO toute_demandes (id, numero, description, ligne_budgetaire, produit_concerne, quantite, fournisseur, prix_unitaire, lien_vers_site, image, jour, mail, nom) VALUES ('$id_demande', $numero, '$description','$budget','$produits','$quantite','$fournisseur','$prix','$lien',NULL,'$date','$mail','$enseignant')"; 
 		$sth = $base->prepare($sql);
 		$sth->execute();
-		echo $sql;
+		
 
-	    #echo '<body onLoad="alert(\'Votre ajout a bien été pris en compte!\')">';
-		#echo '<meta http-equiv="refresh" content="0;URL=accEtudiant.php">';
+	    echo '<body onLoad="alert(\'Votre ajout a bien été pris en compte!\')">';
+		echo '<meta http-equiv="refresh" content="0;URL=accEtudiant.php">';
 	}
 ?>
