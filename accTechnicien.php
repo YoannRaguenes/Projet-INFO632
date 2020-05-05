@@ -14,7 +14,7 @@
 			</div>		
 		
 			<div id="Bienvenue">
-			<h2>Bienvenue sur la plateforme de commande de matériel</h2>
+			<h1>Bienvenue sur la plateforme de commande de matériel</h1>
 			</div>
 		
 			
@@ -29,7 +29,10 @@
 				<input type="submit" id='submit'onclick=window.location.href='demande_traitees_technicien.php' value='DEMANDES TRAITEES' >
 				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
 				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
-				<input type="submit" id='submit' value='RESULTATS ENQUETE' >			
+				<input type="submit" id='submit' value='RESULTATS ENQUETE' >	
+				<div id="logopopo">
+			<img src="images\logoPOPO.jpg" alt="" />
+		</div>
 			</div>
 			
 			
@@ -37,9 +40,12 @@
 		<div id="contenu">
 			Bienvenue sur la plateforme de demande matériel!
 			<p>Vous pourrez ici consulter toutes les demandes efféctuées par les élève ainsi que les enseignants pour du matériel pédagogique</p>
-			<div id="logopopo">
-			<img src="images\logoPOPO.jpg" alt="" />
-		</div>	
+			
+			<video width=1000 height=500 preload="auto" loop="" muted="" autoplay="" playsinline="">
+                <source src="HomePolytech.mp4" type="video/mp4">
+                                           
+            </video>
+				
 		</div>
 		</div>
 
