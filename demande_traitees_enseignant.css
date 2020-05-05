@@ -1,9 +1,11 @@
+
+
 body{
     background: #0A8BBF;
 }
 
 img{
-  width: 100%;
+  width:90%;
   height: auto;
   margin:auto;
   
@@ -36,13 +38,14 @@ font-family: "Luxi Sans", sans-serif;
  text-align:center;
  float: right;
  width:10%;
+ height:69%;
  margin:auto;
  border-radius: 1em;
  
  }
 
 #main {
-max-with:960px;
+max-witdh:960px;
 margin:auto;
 height:100%
 width:100%;
@@ -64,11 +67,11 @@ border-radius: 1em;
 text-align:center;
 margin-left:245px;
 background-color:#4682B4;
-height:82%;
+height:88%;
 width:81.5%;
 float:right;
 margin:auto;
-border: 1px solid #fff;
+
 border-radius: 1em;
 font-family:  "Luxi Sans", sans-serif;
 }
@@ -78,6 +81,7 @@ font-family:  "Luxi Sans", sans-serif;
     margin: auto;
     width: 98%;
     padding: 10px;
+	height:100%;
     
     background-color: #4682B4;
     text-align: center; 
@@ -120,9 +124,18 @@ text-align:center;
 clear:both;
 height:100;
 width:100%;
+margin:auto;
+
 }
 
-#bouton_valider{
+#credits {
+height:40%;
+width:100%;
+margin:auto;
+
+}	
+
+#bouton_consul{
   background-color: #000;
   margin-left: 5%;
   padding : 10px 50px;
@@ -145,3 +158,15 @@ input[type=submit] {
     height:10%;
   
 }
+
+
+
+
+
+
+
+
+
+
+
+

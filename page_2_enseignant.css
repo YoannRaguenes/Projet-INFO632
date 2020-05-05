@@ -5,7 +5,7 @@ body{
 }
 
 img{
-  width: 100%;
+  width:90%;
   height: auto;
   margin:auto;
   
@@ -38,13 +38,14 @@ font-family: "Luxi Sans", sans-serif;
  text-align:center;
  float: right;
  width:10%;
+ height:69%;
  margin:auto;
  border-radius: 1em;
  
  }
 
 #main {
-max-with:960px;
+max-witdh:960px;
 margin:auto;
 height:100%
 width:100%;
@@ -66,11 +67,11 @@ border-radius: 1em;
 text-align:center;
 margin-left:245px;
 background-color:#4682B4;
-height:82%;
+height:88%;
 width:81.5%;
 float:right;
 margin:auto;
-border: 1px solid #fff;
+
 border-radius: 1em;
 font-family:  "Luxi Sans", sans-serif;
 }
@@ -80,6 +81,7 @@ font-family:  "Luxi Sans", sans-serif;
     margin: auto;
     width: 98%;
     padding: 10px;
+	height:100%;
     
     background-color: #4682B4;
     text-align: center; 
@@ -91,6 +93,7 @@ font-family:  "Luxi Sans", sans-serif;
 legend{
     width:40%;
     margin-left: 5%;
+    margin:auto;
     background-color: #000;
     color: #fff;
     padding: 3px 6px;
@@ -103,6 +106,7 @@ label {
   display: inline-block;
   width: 150px;
   text-align: right;
+  margin:auto;
 }
 
 p{
@@ -118,9 +122,19 @@ p{
 background-color:#0A8BBF;
 text-align:center;
 clear:both;
+height:100;
+width:100%;
+margin:auto;
+
+}
+
+#credits {
 height:40%;
 width:100%;
-}
+margin:auto;
+
+}	
+
 #bouton_consul{
   background-color: #000;
   margin-left: 5%;
@@ -128,7 +142,7 @@ width:100%;
   color: white;
   border:none;
   cursor:pointer;
-  width: 15%;
+  width: 20%;
 }
 
 
