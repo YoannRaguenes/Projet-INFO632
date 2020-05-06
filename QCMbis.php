@@ -68,7 +68,17 @@
    <input type="submit" value="Valider" id='submit2'/>
    </fieldset>
 </form>
-			
+<?php 
+include("connect_bdd.php");
+if(isset($_POST['avis1']) && isset($_POST['avis2']) && isset($_POST['description'])){
+$avis1 = $_POST['avis1'];
+$avis2 = $_POST['avis2'];
+$descri = $_POST['description'];
+$sql= "INSERT INTO `avis`( `satisfaction_web`, `satisfaction_commande`, `explication`) VALUES ('$avis1','$avis2','$descri')";
+$sth = $base->prepare($sql);
+$sth->execute();
+}
+?>			
 		
 		</div>
 		</div>
