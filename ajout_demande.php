@@ -42,7 +42,6 @@
                         $sql = "INSERT INTO demande_materiel(description, ligne_budgetaire, produit_concerne, quantite, fournisseur, prix_unitaire, lien_vers_site, image, jour, mail,numero,enseignant) VALUES ('$description','$budget','$produits','$quantite','$fournisseur','$prix','$lien','$chemin','$date','$mail',$numero,'$enseignant')";
 						$sth = $base->prepare($sql);
 	    				$sth->execute();
-	    				echo "L'envoi a bien été effectué !";
 
                          
                 
@@ -87,7 +86,7 @@ else{
 
 	}
 
-	    #echo '<body onLoad="alert(\'Votre ajout a bien été pris en compte!\')">';
-		#echo '<meta http-equiv="refresh" content="0;URL=accEtudiant.php">';
+	    echo '<body onLoad="alert(\'Votre ajout a bien été pris en compte!\')">';
+		echo '<meta http-equiv="refresh" content="0;URL=accEtudiant.php">';
 	}
 ?>
