@@ -1,4 +1,3 @@
-<?php session_start()?>
 <html>
     <head>
 	
@@ -10,7 +9,7 @@
 		<div id="entete">
 		
 			<div id="cadreConnec">
-			<?php $_SESSION['nom']." ".$_SESSION['prenom']?>
+			Nom d'utilisateur
 			<p></p>
 			<a href="déconnexion.php">Se déconnecter</a>
 			</div>		
@@ -43,7 +42,7 @@
 
 		<div id="contenu">
 			<div id="form">
-			<form action = 'ajout_demande.php' method='post'>
+			<form action = 'ajout_demande.php' method='post' enctype="multipart/form-data">
 				<fieldset>
 					<legend>Ajout Demande</legend>
 					<p><label>Numéro étudiant</label> : <input type='text' name='numero' /></p>
@@ -55,7 +54,7 @@
 					<p><label>Fournisseur</label> : <input type='text' name='fournisseur' /></p>
 					<p><label>Prix unitaire</label> : <input type='text' name='prix' /></p>
 					<p><label>Lien vers site marchand</label> : <input type='url' name='lien' /></p>
-					<p><label>Image du produit</label> : <input type='file' name='image' /></p>
+					<p>Fichier ou image: <input type='file' name='monfichier' /></p>
 					<p><label>Date de demande</label> : <input type='date' name='date' /></p>
 					<p><label>Mail pour suivi de l'avancement</label> : <input type='mail' name='mail' /></p>
 					<br>
