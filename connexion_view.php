@@ -19,7 +19,9 @@
 		                <p><label><b>Mot de passe</b></label><br/>
 		                <input type="password" placeholder="Entrer le mot de passe" name="password" required=""  ></p>
 
+		                <input type="checkbox" name ="rememberme"  id="onclick"/> <label for="onclick"><b>Se souvenir de moi</b></label>
 		                <input type="submit" name='verif_conex' value='Connexion' >
+
 
 		            </fieldset>
 	                

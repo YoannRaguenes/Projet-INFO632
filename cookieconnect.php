@@ -1,18 +1,10 @@
-<?php
-	
-	include('connect_bdd.php');
-	session_start();
-	include_once('cookieconnect.php');
-	
-
-	if(isset($_POST['email'], $_POST['password'],$_POST['verif_conex']))
+<?php 
+	//verification si le cookie existe et si la session n'est pas ouverte
+	if(!isset($_SESSION['id']) AND isset($_COOKIE['email'],$_COOKIE['mdp']) AND !empty($_COOKIE['email'])AND !empty($_COOKIE['mdp']))
 	{
-		if(!empty($_POST['email']) AND (!empty($_POST['password'])))
-		{
-			$mdp = htmlspecialchars($_POST['password']);
-			$mail = htmlspecialchars($_POST['email']);
-			$mdp_hache = password_hash($mdp, PASSWORD_DEFAULT);
-
+		$mdp = $_COOKIE['mdp'];
+		$mail = $_COOKIE['email'];
+		$mdp_hache = password_hash($mdp, PASSWORD_DEFAULT);
 
 			$userexist = $base->prepare("SELECT nom, prenom, password FROM personne WHERE email='$mail'" );
 	 		$userexist->execute();
@@ -39,7 +31,6 @@
 	 		$service ->execute();
 	 		$rez = $service ->fetch();
 	 		$id_serv= $rez[0];
-
 
 
 
@@ -93,38 +84,11 @@
 		 						
  							}
 		 					
-		 					if(isset($_POST['rememberme']))
-		 					{
-		 						setcookie('email', $mail,time()+365*24*3600,null,null,false,true);
-		 						setcookie('mdp', $mdp,time()+365*24*3600,null,null,false,true); 
-		 					}
-
-
- 							header('Location: http://localhost/projet-info642/tempo.php');
-								exit();
-
-	 				}
-
-	 		else
-	 		{
-	 			$erreur ="Mot de passe ou email incorrect";
-	 		}
 
 
 
+						}
 
-		}
-
-		
 	}
 
-
-
-
-
-
-
-
-
-	require_once('connexion_view.php');
-?>
+ ?>

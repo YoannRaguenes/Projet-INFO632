@@ -1,7 +1,9 @@
 <?php
-	include('connect_bdd.php');
 	session_start();
 
+	include('connect_bdd.php');
+	
+		
 	
 	if(isset($_SESSION['id_prof']))
 	{
