@@ -43,7 +43,7 @@ if (!isset($_SESSION['id']))
 			                <?php 
 							if (isset($_SESSION['id_prof']))
 							{
-								echo "<a href ='accEnseigant.php'> Retour à l'acceuil</a>";
+								echo "<a href ='accEnseignant.php'> Retour à l'acceuil</a>";
 
 							}
 							if (isset($_SESSION['id_etud']))
