@@ -36,6 +36,10 @@ else{
 		$link = "infoUserPink.css";
 	
 	}
+	else
+	{
+		$link ="infoUserBlue.css";
+	}
 }
 ?>
 
