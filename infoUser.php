@@ -4,16 +4,47 @@ include('connect_bdd.php');
 if (!isset($_SESSION['id']))
 {
 	header ("Location: http://localhost/projet-INFO642/deconnexion.php");
+
 	 				
 }
 
 
+
 ?>
+<?php
+if(isset($_GET['bleue']))
+{
+	$link = "infoUserBlue.css";
+	$_SESSION['bleue'] = 1;
+	$_SESSION['rose'] = 0;
+}
+elseif(isset($_GET['rose']))
+{
+	$link = "infoUserPink.css";
+	$_SESSION['bleue'] = 0;
+	$_SESSION['rose'] = 1;
+	
+}
+else{
+	if(isset($_SESSION['bleue']) AND ($_SESSION['bleue'] == 1 ))
+	{
+		$link = "infoUserBlue.css";
+
+	}
+	elseif(isset($_SESSION['rose']) AND ($_SESSION['rose'] == 1))
+	{
+		$link = "infoUserPink.css";
+	
+	}
+}
+?>
+
+
 <html>
     <head>
 	
        <meta charset="utf-8">
-        <link rel="stylesheet" href="infoUser.css"  type="text/css" />
+        <link rel="stylesheet" href= <?= $link ?>  type="text/css" />
     </head>
     <body>
     	<div id="fond">
@@ -36,10 +67,12 @@ if (!isset($_SESSION['id']))
 		             	?>
 
 		                <p><b>Nouveau mot de passe :</b></p>
+
 		                <input type="password" placeholder="Ancien mot de passe" name="old_pass" required=""  ></p>
 		                <input type="password" placeholder="Nouveau mot de passe" name="new_pass" required=""  ></p>
 		                <input type="password" placeholder="Confirmation du mot de passe" name="confirm_pass" required=""  ></p>
 		                <input type="submit" name='modif_pass' value='Modification' >
+		               
 			                <?php 
 							if (isset($_SESSION['id_prof']))
 							{
@@ -117,7 +150,21 @@ if (!isset($_SESSION['id']))
 	            ?>
 
 			</div>
-
+		</div>
+		<div id="fond2">
+			<div id=formul2>
+				<form method="GET">
+	            	<fieldset>
+	            		<legend>Personnalisation</legend>
+	            		<p><b>Thème :</b></p> 
+		                <input type="checkbox" name ="bleue"  id="onclick"/> <label>Bleue </label>
+		                <input type="checkbox" name ="rose"  id="onclick"/> <label>Rose</label>
+		
+		                <input type="submit" name='modif_pass' value='Changement de couleur' >
+		            </fieldset>
+	           	</form>
+	       
+			</div>
 		</div>
 
 	</body>
